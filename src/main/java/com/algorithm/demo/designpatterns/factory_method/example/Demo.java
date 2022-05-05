@@ -18,11 +18,7 @@ public class Demo {
     }
 
     /**
-     * EN: The concrete factory is usually chosen depending on configuration or
-     * environment options.
-     *
-     * RU: Приложение создаёт определённую фабрику в зависимости от конфигурации
-     * или окружения.
+     * 具体工厂通常根据配置或环境选项进行选择.
      */
     static void configure() {
         if (System.getProperty("os.name").equals("Windows 10")) {

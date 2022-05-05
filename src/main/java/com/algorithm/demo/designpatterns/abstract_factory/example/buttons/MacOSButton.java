@@ -1,13 +1,10 @@
 package com.algorithm.demo.designpatterns.abstract_factory.example.buttons;
 
 /**
- * EN: All products families have the same varieties (MacOS/Windows).
+ * 所有产品系列都有相同的品种（MacOS/Windows）。
  *
- * This is a MacOS variant of a button.
+ * 这是按钮的 MacOS 变体。
  *
- * RU: Все семейства продуктов имеют одни и те же вариации (MacOS/Windows).
- *
- * Это вариант кнопки под MacOS.
  */
 public class MacOSButton implements Button {
 

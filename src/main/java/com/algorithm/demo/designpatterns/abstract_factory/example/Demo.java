@@ -6,19 +6,12 @@ import com.algorithm.demo.designpatterns.abstract_factory.example.factories.MacO
 import com.algorithm.demo.designpatterns.abstract_factory.example.factories.WindowsFactory;
 
 /**
- * EN: Demo class. Everything comes together here.
- *
- * RU: Демо-класс. Здесь всё сводится воедино.
+ * Demo class
  */
 public class Demo {
 
     /**
-     * EN: Application picks the factory type and creates it in run time
-     * (usually at initialization stage), depending on the configuration or
-     * environment variables.
-     *
-     * RU: Приложение выбирает тип и создаёт конкретные фабрики динамически
-     * исходя из конфигурации или окружения.
+     * 应用程序根据配置或环境变量选择工厂类型并在运行时（通常在初始化阶段）创建它。
      */
     private static Application configureApplication() {
         Application app;

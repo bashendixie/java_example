@@ -1,17 +1,8 @@
 package com.algorithm.demo.designpatterns.abstract_factory.example.buttons;
 
 /**
- * EN: Abstract Factory assumes that you have several families of products,
- * structured into separate class hierarchies (Button/Checkbox). All products of
- * the same family have the common interface.
- *
- * This is the common interface for buttons family.
- *
- * RU: Паттерн предполагает, что у вас есть несколько семейств продуктов,
- * находящихся в отдельных иерархиях классов (Button/Checkbox). Продукты одного
- * семейства должны иметь общий интерфейс.
- *
- * Это — общий интерфейс для семейства продуктов кнопок.
+ * 抽象工厂假设您有几个产品系列，它们被构造成单独的类层次结构（按钮/复选框）。 同一家族的所有产品都具有通用接口。
+ * 这是button的通用接口.
  */
 public interface Button {
     void paint();
