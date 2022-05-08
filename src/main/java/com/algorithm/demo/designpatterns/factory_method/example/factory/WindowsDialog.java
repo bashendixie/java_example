@@ -4,9 +4,7 @@ import com.algorithm.demo.designpatterns.factory_method.example.buttons.Button;
 import com.algorithm.demo.designpatterns.factory_method.example.buttons.WindowsButton;
 
 /**
- * EN: Windows Dialog will produce Windows buttons.
- *
- * RU: Диалог на элементах операционной системы.
+ * Windows 对话框将产生 Windows 按钮。
  */
 public class WindowsDialog extends Dialog {
 

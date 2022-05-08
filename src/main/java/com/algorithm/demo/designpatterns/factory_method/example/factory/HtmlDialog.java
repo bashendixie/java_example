@@ -4,9 +4,7 @@ import com.algorithm.demo.designpatterns.factory_method.example.buttons.Button;
 import com.algorithm.demo.designpatterns.factory_method.example.buttons.HtmlButton;
 
 /**
- * EN: HTML Dialog will produce HTML buttons.
- *
- * RU: HTML-диалог.
+ * EN: HTML Dialog 将产生 HTML 按钮。
  */
 public class HtmlDialog extends Dialog {
 

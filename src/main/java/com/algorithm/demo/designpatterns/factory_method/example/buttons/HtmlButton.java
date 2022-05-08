@@ -1,9 +1,8 @@
 package com.algorithm.demo.designpatterns.factory_method.example.buttons;
 
 /**
- * EN: HTML button implementation.
+ * TML 按钮实现。
  *
- * RU: Реализация HTML кнопок.
  */
 public class HtmlButton implements Button {
 

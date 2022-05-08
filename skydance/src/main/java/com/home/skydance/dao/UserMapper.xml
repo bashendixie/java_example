@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.home.skydance.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.home.skydance.entity.User">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="user_flag" jdbcType="SMALLINT" property="userFlag" />
+        <result column="create_time" jdbcType="DATE" property="createTime" />
+        <result column="action_flag" jdbcType="SMALLINT" property="actionFlag" />
+        <result column="svd_value" jdbcType="INTEGER" property="svdValue" />
+        <result column="thread_no" jdbcType="VARCHAR" property="threadNo" />
+        <result column="update_time" jdbcType="DATE" property="updateTime" />
+    </resultMap>
+
+
+    <select id="countUsers" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        select count(1) from user
+    </select>
+
+    <select id="countPreRecordsByDate" resultType="java.lang.Integer" parameterType="java.util.Date">
+        select count(1) from user where create_time &lt;= #{time}
+    </select>
+
+    <select id="selectByPrimaryKey">
+        select * from user where id=#{id}
+    </select>
+
+    <select id="selectByDateTime" parameterType="map" resultMap="BaseResultMap">
+        select * from user where create_time &lt;= #{time} limit #{start},#{limit}
+    </select>
+
+    <insert id="insertForeach" parameterType="java.util.List" useGeneratedKeys="false">
+        insert into user
+        ( user_name,create_time)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.userName},
+            #{item.createTime}
+            )
+        </foreach>
+    </insert>
+
+    <insert id="updateForeach" parameterType="java.util.List" useGeneratedKeys="false">
+        <foreach collection="list" item="item" index="index" separator=";">
+            update user
+            set
+            action_flag = 1,
+            svd_value = #{item.svdValue},
+            thread_no = #{item.threadNo},
+            update_time = #{item.updateTime}
+            where id = #{item.id}
+        </foreach>
+    </insert>
+
+</mapper>

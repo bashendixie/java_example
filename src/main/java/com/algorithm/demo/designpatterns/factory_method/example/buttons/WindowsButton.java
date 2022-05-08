@@ -6,9 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * EN: Windows button implementation.
+ * EN: Windows 按钮实现。
  *
- * RU: Реализация нативных кнопок операционной системы.
  */
 public class WindowsButton implements Button {
     JPanel panel = new JPanel();

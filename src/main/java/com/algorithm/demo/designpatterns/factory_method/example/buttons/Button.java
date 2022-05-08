@@ -1,9 +1,7 @@
 package com.algorithm.demo.designpatterns.factory_method.example.buttons;
 
 /**
- * EN: Common interface for all buttons.
- *
- * RU: Общий интерфейс для всех продуктов.
+ * 所有按钮的通用接口
  */
 public interface Button {
     void render();

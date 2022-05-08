@@ -5,9 +5,7 @@ import com.algorithm.demo.designpatterns.factory_method.example.factory.HtmlDial
 import com.algorithm.demo.designpatterns.factory_method.example.factory.WindowsDialog;
 
 /**
- * EN: Demo class. Everything comes together here.
- *
- * RU: Демо-класс. Здесь всё сводится воедино.
+ * Demo class.
  */
 public class Demo {
     private static Dialog dialog;
@@ -29,13 +27,7 @@ public class Demo {
     }
 
     /**
-     * EN: All of the client code should work with factories and products
-     * through abstract interfaces. This way it does not care which factory it
-     * works with and what kind of product it returns.
-     *
-     * RU: Весь остальной клиентский код работает с фабрикой и продуктами только
-     * через общий интерфейс, поэтому для него неважно какая фабрика была
-     * создана.
+     * 所有客户端代码都应该通过抽象接口与工厂和产品一起工作。 这样，它就不会关心它与哪个工厂合作以及它返回什么样的产品。
      */
     static void runBusinessLogic() {
         dialog.renderWindow();
