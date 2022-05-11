@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>    
+const xhr = new XMLHttpRequest;    
+// true 开启异步    
+xhr.open("GET","http://127.0.0.1:9001/resttemplate-blocking",true);    
+xhr.onreadystatechange = ()=>{        
+	if(xhr.readyState === 4){            
+		if(200 <= xhr.status && xhr.status < 300 || xhr.status === 304){                
+			console.log(xhr.response);            
+		}        
+	}    
+}    
+xhr.send()
+</script>
+</head>
+</html>
