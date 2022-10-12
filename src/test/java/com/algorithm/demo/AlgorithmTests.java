@@ -1,22 +1,44 @@
 package com.algorithm.demo;
 
 import com.algorithm.demo.algorithms.*;
-import com.algorithm.demo.examples.LargestSumContiguousSubarray;
+//import com.algorithm.demo.examples.LargestSumContiguousSubarray;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.nio.ByteBuffer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.zip.CRC32;
 
 @SpringBootTest
 public class AlgorithmTests {
+
+    @Test
+    void bubble_buffer()
+    {
+        try {
+            Enumeration<NetworkInterface> list = NetworkInterface.getNetworkInterfaces();
+            while(list.hasMoreElements())
+            {
+                NetworkInterface i = list.nextElement();
+                System.out.println(i.getMTU());
+                System.out.println(i.getDisplayName());
+            }
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
+
+        //StringBuffer a = new StringBuffer();
+
+        java.nio.
+        ByteBuffer.allocate(100);
+    }
+
 
     @Test
     void bubble_sort()
@@ -97,8 +119,8 @@ public class AlgorithmTests {
         //java.util.concurrent.Semaphore
         java.util.concurrent.CompletableFuture a = new CompletableFuture();
 
-        Deadlock deadlock = new Deadlock();
-        deadlock.test();
+//        Deadlock deadlock = new Deadlock();
+//        deadlock.test();
 
         try {
             Thread.sleep(10000);
@@ -112,12 +134,10 @@ public class AlgorithmTests {
     {
         int anInt1 = 123_45_6;
 
-        Integer[] a = {1, 2, 3, 4, -9, 9, 2};
-        LargestSumContiguousSubarray l = new LargestSumContiguousSubarray(a);
-        l.FindSubarrayBy();
+//        Integer[] a = {1, 2, 3, 4, -9, 9, 2};
+//        LargestSumContiguousSubarray l = new LargestSumContiguousSubarray(a);
+//        l.FindSubarrayBy();
         //l.FindSubarrayByViolence();
-
-
     }
 
 }
